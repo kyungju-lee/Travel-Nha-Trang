@@ -156,6 +156,35 @@ const travelData = {
 
     // 관광지 정보
     attractions: {
+        cam_hai_tay_market: {
+            name: "깜하이떠이/깜득 현지 시장",
+            nameEnglish: "Chợ Cam Đức / Cam Hải",
+            type: "전통 시장",
+            hours: "05:00 - 18:00 (오전 추천)",
+            distance: "리조트에서 차로 약 10분",
+            googleMaps: "https://maps.app.goo.gl/v8Y8V9W7X6Z5A4S3D",
+            description: "관광객이 거의 없는 찐 로컬 시장. 망고 등 신선한 열대 과일을 매우 저렴하게 구입할 수 있음. 현지인의 삶을 체험하기 좋음.",
+            tips: [
+                "오전 7~9시 사이가 가장 활기참",
+                "망고 등 과일 구매 추천",
+                "간단한 베트남어 인사말을 준비해가면 좋음"
+            ],
+            transportation: "그랩(Grab) 이용"
+        },
+        thuy_trieu_lagoon: {
+            name: "댐 Thủy Triều (석호)",
+            nameEnglish: "Thuy Trieu Lagoon",
+            type: "자연경관",
+            hours: "24시간 (일몰 시간 추천)",
+            distance: "리조트에서 차로 약 10분",
+            googleMaps: "https://maps.app.goo.gl/n8M7L6K5J4H3G2F1E",
+            description: "깜라인 리조트 단지와 육지 사이에 위치한 거대한 석호. 석양이 매우 아름다우며, 꺼우머이 다리 위에서 바라보는 풍경이 일품.",
+            tips: [
+                "일몰 시간에 맞춰 방문하여 산책 추천",
+                "주변 해산물 식당과 함께 방문하기 좋음"
+            ],
+            transportation: "그랩(Grab) 이용"
+        },
         vinwonders: {
             name: "빈원더스 나트랑",
             nameEnglish: "VinWonders Nha Trang",
@@ -238,6 +267,22 @@ const travelData = {
     restaurants: {
         seafood: [
             {
+                name: "Hải Sản Đinh Gia (딩기아 해산물)",
+                type: "해산물 전문점",
+                description: "깜라인 지역에서 가장 유명한 해산물 맛집 중 하나. 한국인 입맛에 잘 맞는 양념과 신선한 재료로 유명함. 모닝글로리, 버터갈릭 새우 추천!",
+                googleMaps: "https://maps.app.goo.gl/v5eYy7w6mSjWn4U39",
+                travelTime: "리조트에서 차로 약 12분",
+                tags: ["해산물", "한국인인기", "깜하이떠이"]
+            },
+            {
+                name: "Hải Sản Cầu Mới (꺼우머이 해산물)",
+                type: "로컬 해산물",
+                description: "꺼우머이 다리 근처에 위치한 로컬 감성의 해산물 식당가. 합리적인 가격에 댐 Thủy Triều의 경치를 보며 식사 가능.",
+                googleMaps: "https://maps.app.goo.gl/kX3XhU1pWp6z3v7P9",
+                travelTime: "리조트에서 차로 약 10분",
+                tags: ["로컬맛집", "가성비", "깜하이떠이"]
+            },
+            {
                 name: "Louisiane Brewhouse",
                 type: "브루어리 & 해산물",
                 description: "해변가 브루어리. 자체 생산 맥주와 신선한 해산물. 수영장도 있어 아이와 함께 즐기기 좋음!",
@@ -258,6 +303,14 @@ const travelData = {
         ],
         local: [
             {
+                name: "Bếp Nhà Cam Lâm (벱냐)",
+                type: "베트남 가정식",
+                description: "정갈하고 깔끔한 베트남 집밥 스타일 레스토랑. 카페 같은 예쁜 인테리어와 한국인 입맛에 딱 맞는 메뉴 구성.",
+                googleMaps: "https://maps.app.goo.gl/f7hF4E3R3S2P2W2z8",
+                travelTime: "리조트에서 차로 약 10분",
+                tags: ["집밥", "깔끔함", "깜하이떠이"]
+            },
+            {
                 name: "Banh Mi Phuong",
                 type: "반미 (베트남 샌드위치)",
                 description: "베트남 대표 길거리 음식. 바삭한 빵과 신선한 속재료!",
@@ -271,6 +324,14 @@ const travelData = {
             }
         ],
         cafes: [
+            {
+                name: "The 1986 Coffee",
+                type: "모던 카페",
+                description: "깜하이떠이에서 가장 세련된 카페 중 하나. 넓고 쾌적한 실내와 다양한 커피/음료 메뉴. 현지 젊은층에게도 핫플!",
+                googleMaps: "https://maps.app.goo.gl/5r5L8vV7W3N2u1P7A",
+                travelTime: "리조트에서 차로 약 11분",
+                tags: ["핫플레이스", "인테리어", "깜하이떠이"]
+            },
             {
                 name: "Cong Caphe (콩카페)",
                 type: "베트남 전통 카페",

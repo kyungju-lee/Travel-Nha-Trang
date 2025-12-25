@@ -828,6 +828,11 @@ body {
     color: var(--white);
 }
 
+.card-badge.local {
+    background: #F39C12;
+    color: var(--white);
+}
+
 .card-image {
     height: 200px;
     background-size: cover;
@@ -853,6 +858,14 @@ body {
 
 .card-image.honchong {
     background: linear-gradient(135deg, #4169E1, #6495ED, #87CEEB);
+}
+
+.card-image.local-market {
+    background: linear-gradient(135deg, #E67E22, #F39C12, #F1C40F);
+}
+
+.card-image.thuy-trieu {
+    background: linear-gradient(135deg, #2C3E50, #3498DB, #8E44AD);
 }
 
 .card-overlay {
@@ -996,6 +1009,33 @@ body {
     font-size: 0.85rem;
     color: var(--coral);
     font-weight: 500;
+}
+
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--turquoise-dark);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: var(--space-xs);
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: var(--coral);
+    text-decoration: underline;
+}
+
+.food-footer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.food-card.highlight {
+    border: 2px solid rgba(243, 156, 18, 0.3);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.1);
 }
 
 /* ============================================
