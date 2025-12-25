@@ -39,18 +39,33 @@
 
 ### GitHub Pages 배포
 
-1. GitHub에서 새 저장소 생성 (`nhatrang-travel`)
-2. 다음 명령어 실행:
+#### 방법 1: GitHub Actions (권장)
 
-```bash
-git remote add origin https://github.com/[사용자아이디]/nhatrang-travel.git
-git branch -M main
-git push -u origin main
-```
+이 저장소에는 자동 배포 워크플로우가 포함되어 있습니다. 다음 단계만 따르면 됩니다:
 
-3. GitHub 저장소 → Settings → Pages
-4. Source: `main` 브랜치 선택
-5. 몇 분 후 `https://[사용자아이디].github.io/nhatrang-travel/` 접속 가능!
+1. GitHub 저장소 → **Settings** → **Pages**
+2. **Source**: `GitHub Actions` 선택
+3. 저장 후 자동으로 배포됩니다!
+
+#### 방법 2: 수동 설정
+
+1. GitHub 저장소 → **Settings** → **Pages**
+2. **Source**: `Deploy from a branch` 선택
+3. **Branch**: `main` 선택
+4. **Folder**: `/ (root)` 선택
+5. **Save** 클릭
+
+#### ⚠️ 404 오류 해결 방법
+
+만약 404 오류가 발생한다면:
+
+1. **리포지토리가 Public인지 확인** (GitHub Pages는 Public 저장소만 무료)
+2. **Settings → Pages에서 설정 확인**:
+   - Source: `main` 브랜치 또는 `GitHub Actions` 선택
+   - Folder: `/ (root)` 선택
+3. **`.nojekyll` 파일 확인** (이미 포함되어 있음)
+4. **1-2분 기다린 후 다시 시도** (배포에 시간이 걸릴 수 있음)
+5. **브라우저 캐시 삭제 후 재시도**
 
 ## 📁 파일 구조
 
