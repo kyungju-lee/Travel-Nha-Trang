@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# User directories
+AppData/
+Desktop/
+Documents/
+Downloads/
+Pictures/
+Videos/
+Music/
+OneDrive/
+
