@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴 나트랑 여행 비서 | Nha Trang Travel Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="travel-badge">
+                <span class="badge-icon">✈️</span>
+                <span>2026.01.01 ~ 01.06</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-sub">Welcome to</span>
+                <span class="title-main">Nha Trang</span>
+                <span class="title-korean">나트랑 여행</span>
+            </h1>
+            <div class="travelers">
+                <div class="traveler">
+                    <span class="avatar">👨</span>
+                    <span>아빠</span>
+                </div>
+                <div class="traveler">
+                    <span class="avatar">👩</span>
+                    <span>엄마</span>
+                </div>
+                <div class="traveler">
+                    <span class="avatar">👦</span>
+                    <span>아들 (11세)</span>
+                </div>
+            </div>
+            <a href="#schedule" class="scroll-indicator">
+                <span>일정 보기</span>
+                <div class="scroll-arrow">↓</div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#schedule" class="nav-link active">📅 일정</a>
+            <a href="#resort" class="nav-link">🏨 리조트</a>
+            <a href="#attractions" class="nav-link">🏛️ 관광지</a>
+            <a href="#food" class="nav-link">🍽️ 맛집</a>
+            <a href="#checklist" class="nav-link">✅ 체크리스트</a>
+        </div>
+    </nav>
+
+    <!-- Flight Info -->
+    <section class="flight-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">✈️</span>
+                항공 정보
+            </h2>
+            <div class="flight-cards">
+                <!-- Outbound Flight -->
+                <div class="flight-card outbound">
+                    <div class="flight-header">
+                        <span class="flight-type">가는 편</span>
+                        <span class="flight-number">TW045</span>
+                    </div>
+                    <div class="flight-route">
+                        <div class="airport departure">
+                            <span class="airport-code">CJJ</span>
+                            <span class="airport-name">청주</span>
+                            <span class="flight-time">20:45</span>
+                            <span class="flight-date">2026.01.01 (목)</span>
+                        </div>
+                        <div class="flight-arrow">
+                            <div class="arrow-line"></div>
+                            <span class="duration">5시간 20분</span>
+                            <div class="plane-icon">✈️</div>
+                        </div>
+                        <div class="airport arrival">
+                            <span class="airport-code">CXR</span>
+                            <span class="airport-name">나트랑</span>
+                            <span class="flight-time">00:05 <span class="next-day">+1</span></span>
+                            <span class="flight-date">2026.01.02 (금)</span>
+                        </div>
+                    </div>
+                    <div class="flight-footer">
+                        <span class="carrier">🟥 티웨이항공</span>
+                        <span class="class">스마트운임 · 직항</span>
+                    </div>
+                </div>
+
+                <!-- Return Flight -->
+                <div class="flight-card return">
+                    <div class="flight-header">
+                        <span class="flight-type">오는 편</span>
+                        <span class="flight-number">TW046</span>
+                    </div>
+                    <div class="flight-route">
+                        <div class="airport departure">
+                            <span class="airport-code">CXR</span>
+                            <span class="airport-name">나트랑</span>
+                            <span class="flight-time">01:05</span>
+                            <span class="flight-date">2026.01.06 (화)</span>
+                        </div>
+                        <div class="flight-arrow">
+                            <div class="arrow-line"></div>
+                            <span class="duration">5시간 15분</span>
+                            <div class="plane-icon return-plane">✈️</div>
+                        </div>
+                        <div class="airport arrival">
+                            <span class="airport-code">CJJ</span>
+                            <span class="airport-name">청주</span>
+                            <span class="flight-time">08:20</span>
+                            <span class="flight-date">2026.01.06 (화)</span>
+                        </div>
+                    </div>
+                    <div class="flight-footer">
+                        <span class="carrier">🟥 티웨이항공</span>
+                        <span class="class">스마트운임 · 직항</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">📅</span>
+                상세 일정
+            </h2>
+            <div class="timeline">
+                <!-- Day 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-1">
+                        <span class="day-num">1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 1일 (목) - 출발일</h3>
+                            <span class="day-theme">🛫 출국</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event">
+                                <span class="event-time">18:00</span>
+                                <div class="event-detail">
+                                    <strong>청주공항 도착</strong>
+                                    <p>출국 수속 및 탑승 준비 (출발 2시간 45분 전)</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">20:45</span>
+                                <div class="event-detail">
+                                    <strong>✈️ 청주 출발</strong>
+                                    <p>TW045편 나트랑행</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-2">
+                        <span class="day-num">2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 2일 (금) - 빈원더스</h3>
+                            <span class="day-theme">🎢 테마파크</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event highlight">
+                                <span class="event-time">00:05</span>
+                                <div class="event-detail">
+                                    <strong>🛬 나트랑 깜란공항 도착</strong>
+                                    <p>리조트 픽업 서비스 이용</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">01:00</span>
+                                <div class="event-detail">
+                                    <strong>🏨 아미아나 리조트 체크인</strong>
+                                    <p>새벽 체크인 후 취침</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">08:00</span>
+                                <div class="event-detail">
+                                    <strong>🍳 조식</strong>
+                                    <p>리조트 조식 뷔페</p>
+                                </div>
+                            </div>
+                            <div class="event highlight">
+                                <span class="event-time">09:00</span>
+                                <div class="event-detail">
+                                    <strong>🎢 빈원더스 오픈런!</strong>
+                                    <p>👩 엄마 + 👦 아들 출발 (그랩 이용)</p>
+                                    <div class="tip-box">
+                                        <span class="tip-icon">💡</span>
+                                        <div class="tip-content">
+                                            <strong>추천 순서</strong>
+                                            <ol>
+                                                <li>🎿 알파인 코스터 (먼저!)</li>
+                                                <li>⛏️ 광산 탐험</li>
+                                                <li>🌊 워터파크 (더울 때)</li>
+                                                <li>🎠 놀이기구 재탑승</li>
+                                                <li>🎭 공연 관람</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">18:00</span>
+                                <div class="event-detail">
+                                    <strong>🏨 리조트 복귀</strong>
+                                    <p>그랩으로 숙소 복귀</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">20:00</span>
+                                <div class="event-detail">
+                                    <strong>😴 일찍 취침</strong>
+                                    <p>피곤할 테니 푹 쉬기</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="day-note">
+                            <span class="note-icon">👨</span>
+                            <p>아빠는 리조트에서 휴식 또는 동행 선택 가능</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-3">
+                        <span class="day-num">3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 3일 (토) - 휴양</h3>
+                            <span class="day-theme">🏖️ 리조트</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event">
+                                <span class="event-time">자유</span>
+                                <div class="event-detail">
+                                    <strong>🌴 리조트 휴양</strong>
+                                    <p>수영장, 해변, 스파 이용</p>
+                                </div>
+                            </div>
+                            <div class="event optional">
+                                <span class="event-time">선택</span>
+                                <div class="event-detail">
+                                    <strong>🏛️ 포나가르 사원 방문</strong>
+                                    <p>심심하면 유적지 구경 (그랩 약 30분)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-4">
+                        <span class="day-num">4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 4일 (일) - 휴양</h3>
+                            <span class="day-theme">🏖️ 리조트</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event">
+                                <span class="event-time">자유</span>
+                                <div class="event-detail">
+                                    <strong>🌴 리조트 휴양</strong>
+                                    <p>해변 산책, 수영, 맛집 탐방</p>
+                                </div>
+                            </div>
+                            <div class="event optional">
+                                <span class="event-time">선택</span>
+                                <div class="event-detail">
+                                    <strong>🚶 주변 탐방</strong>
+                                    <p>롱선사, 담 시장, 혼총곶 등</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-5">
+                        <span class="day-num">5</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 5일 (월) - 마지막 날</h3>
+                            <span class="day-theme">🌅 휴양</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event">
+                                <span class="event-time">자유</span>
+                                <div class="event-detail">
+                                    <strong>🌴 마지막 휴양</strong>
+                                    <p>리조트에서 여유롭게</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">23:00</span>
+                                <div class="event-detail">
+                                    <strong>🧳 체크아웃 준비</strong>
+                                    <p>짐 정리 및 공항 이동 준비</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker day-6">
+                        <span class="day-num">6</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="day-header">
+                            <h3>1월 6일 (화) - 귀국</h3>
+                            <span class="day-theme">🛬 귀국</span>
+                        </div>
+                        <div class="day-events">
+                            <div class="event highlight">
+                                <span class="event-time">01:05</span>
+                                <div class="event-detail">
+                                    <strong>✈️ 나트랑 출발</strong>
+                                    <p>TW046편 청주행</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <span class="event-time">08:20</span>
+                                <div class="event-detail">
+                                    <strong>🛬 청주공항 도착</strong>
+                                    <p>즐거운 여행 끝! 🎉</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resort Section -->
+    <section id="resort" class="resort-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🏨</span>
+                숙소 정보
+            </h2>
+            <div class="resort-card">
+                <div class="resort-image">
+                    <div class="resort-badge">5성급</div>
+                    <div class="resort-name-overlay">
+                        <h3>Amiana Resort Cam Ranh</h3>
+                        <p>아미아나 깜란 리조트</p>
+                    </div>
+                </div>
+                <div class="resort-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>위치</strong>
+                                <p>깜란만, 나트랑</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🚗</span>
+                            <div>
+                                <strong>공항 픽업</strong>
+                                <p>신청 완료 ✅</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🛏️</span>
+                            <div>
+                                <strong>체크인/아웃</strong>
+                                <p>14:00 / 12:00</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🍳</span>
+                            <div>
+                                <strong>조식</strong>
+                                <p>뷔페 포함</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resort-amenities">
+                        <h4>시설 안내</h4>
+                        <div class="amenity-tags">
+                            <span class="tag">🏊 인피니티 풀</span>
+                            <span class="tag">🏖️ 프라이빗 비치</span>
+                            <span class="tag">💆 스파</span>
+                            <span class="tag">🧘 요가</span>
+                            <span class="tag">🍽️ 레스토랑</span>
+                            <span class="tag">🏋️ 피트니스</span>
+                            <span class="tag">🎾 테니스</span>
+                            <span class="tag">👶 키즈클럽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🏛️</span>
+                추천 관광지
+            </h2>
+            <div class="attractions-grid">
+                <!-- VinWonders -->
+                <div class="attraction-card featured">
+                    <div class="card-badge must-go">필수</div>
+                    <div class="card-image vinwonders">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>🎢 빈원더스 나트랑</h3>
+                        <p class="card-desc">베트남 최대 테마파크. 놀이기구, 워터파크, 아쿠아리움, 공연까지!</p>
+                        <div class="card-meta">
+                            <span>⏰ 09:00 - 21:00</span>
+                            <span>🚗 리조트에서 약 50분</span>
+                        </div>
+                        <div class="card-tips">
+                            <strong>💡 공략 팁:</strong>
+                            <ul>
+                                <li>오픈런 필수! 인기 어트랙션 먼저</li>
+                                <li>알파인 코스터 → 광산 탐험 순서</li>
+                                <li>더울 때 워터파크 이동</li>
+                                <li>저녁 공연 시간 체크</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Po Nagar -->
+                <div class="attraction-card">
+                    <div class="card-badge recommend">추천</div>
+                    <div class="card-image ponagar">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>🏛️ 포나가르 사원</h3>
+                        <p class="card-desc">7세기 참파 왕국의 힌두교 유적지. 아름다운 건축과 나트랑 전경.</p>
+                        <div class="card-meta">
+                            <span>⏰ 06:00 - 18:00</span>
+                            <span>🚗 리조트에서 약 30분</span>
+                        </div>
+                        <div class="card-tips">
+                            <strong>💡 방문 팁:</strong>
+                            <ul>
+                                <li>입장료: 약 22,000동</li>
+                                <li>짧은 바지/민소매 불가 (가릴 옷 제공)</li>
+                                <li>오전 방문 추천 (덜 더움)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Son Pagoda -->
+                <div class="attraction-card">
+                    <div class="card-image longson">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>🛕 롱선사</h3>
+                        <p class="card-desc">거대한 백색 불상이 있는 불교 사원. 언덕 위에서 시내 전경 감상.</p>
+                        <div class="card-meta">
+                            <span>⏰ 08:00 - 17:00</span>
+                            <span>🚗 리조트에서 약 35분</span>
+                        </div>
+                        <div class="card-tips">
+                            <strong>💡 방문 팁:</strong>
+                            <ul>
+                                <li>입장료: 무료</li>
+                                <li>계단이 많아 편한 신발 필수</li>
+                                <li>포나가르 사원과 함께 방문 추천</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dam Market -->
+                <div class="attraction-card">
+                    <div class="card-image dammarket">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>🛒 담 시장</h3>
+                        <p class="card-desc">나트랑 최대 전통시장. 기념품, 과일, 현지 음식 체험.</p>
+                        <div class="card-meta">
+                            <span>⏰ 06:00 - 19:00</span>
+                            <span>🚗 리조트에서 약 35분</span>
+                        </div>
+                        <div class="card-tips">
+                            <strong>💡 방문 팁:</strong>
+                            <ul>
+                                <li>흥정 필수! (처음 가격의 50-70%)</li>
+                                <li>소지품 주의</li>
+                                <li>오전에 방문하면 더 활기참</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hon Chong -->
+                <div class="attraction-card">
+                    <div class="card-image honchong">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>🪨 혼총곶</h3>
+                        <p class="card-desc">아름다운 바위 해안. 사진 명소로 유명한 자연 경관.</p>
+                        <div class="card-meta">
+                            <span>⏰ 06:00 - 18:00</span>
+                            <span>🚗 리조트에서 약 25분</span>
+                        </div>
+                        <div class="card-tips">
+                            <strong>💡 방문 팁:</strong>
+                            <ul>
+                                <li>일출/일몰 때 방문 추천</li>
+                                <li>포나가르 사원 근처</li>
+                                <li>미끄러운 바위 주의</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="food" class="food-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">🍽️</span>
+                맛집 & 카페
+            </h2>
+            
+            <div class="food-category">
+                <h3 class="category-title">🦐 해산물 레스토랑</h3>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-icon">🍺</div>
+                        <div class="food-info">
+                            <h4>Louisiane Brewhouse</h4>
+                            <p class="food-type">브루어리 & 해산물</p>
+                            <p class="food-desc">해변가 브루어리. 자체 생산 맥주와 신선한 해산물. 수영장도 있어 아이와 함께 즐기기 좋음!</p>
+                            <div class="food-tags">
+                                <span>🍻 수제맥주</span>
+                                <span>🏊 수영장</span>
+                                <span>👨‍👩‍👦 가족친화</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-icon">⛵</div>
+                        <div class="food-info">
+                            <h4>Sailing Club Nha Trang</h4>
+                            <p class="food-type">인터내셔널 & 씨푸드</p>
+                            <p class="food-desc">해변 레스토랑 & 바. 다양한 국제 요리, 저녁 라이브 음악.</p>
+                            <div class="food-tags">
+                                <span>🎵 라이브음악</span>
+                                <span>🌅 석양뷰</span>
+                                <span>🍸 칵테일</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-icon">🦞</div>
+                        <div class="food-info">
+                            <h4>Seafood Restaurant 88</h4>
+                            <p class="food-type">로컬 해산물</p>
+                            <p class="food-desc">현지인도 찾는 해산물 맛집. 신선하고 합리적인 가격.</p>
+                            <div class="food-tags">
+                                <span>💰 가성비</span>
+                                <span>🦐 신선함</span>
+                                <span>👍 현지인맛집</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-category">
+                <h3 class="category-title">🥖 베트남 로컬 푸드</h3>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-icon">🥪</div>
+                        <div class="food-info">
+                            <h4>Banh Mi Phuong</h4>
+                            <p class="food-type">반미 (베트남 샌드위치)</p>
+                            <p class="food-desc">베트남 대표 길거리 음식. 바삭한 빵과 신선한 속재료!</p>
+                            <div class="food-tags">
+                                <span>🔥 인기</span>
+                                <span>💰 저렴</span>
+                                <span>⚡ 간편식</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-icon">🍲</div>
+                        <div class="food-info">
+                            <h4>LIVIN Collective</h4>
+                            <p class="food-type">퓨전 & 버거</p>
+                            <p class="food-desc">현지인과 관광객 모두에게 인기. 버거와 바비큐 요리.</p>
+                            <div class="food-tags">
+                                <span>🍔 버거</span>
+                                <span>🥩 바비큐</span>
+                                <span>😎 분위기</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="food-category">
+                <h3 class="category-title">☕ 카페</h3>
+                <div class="food-grid">
+                    <div class="food-card cafe">
+                        <div class="food-icon">☕</div>
+                        <div class="food-info">
+                            <h4>Cong Caphe (콩카페)</h4>
+                            <p class="food-type">베트남 전통 카페</p>
+                            <p class="food-desc">베트남 전통 커피의 현대적 재해석. 독특한 군대 컨셉 인테리어.</p>
+                            <div class="food-tags">
+                                <span>🥥 코코넛커피</span>
+                                <span>📸 인스타감성</span>
+                                <span>🪖 유니크</span>
+                            </div>
+                            <p class="food-recommend">추천 메뉴: 코코넛 커피, 연유 커피</p>
+                        </div>
+                    </div>
+                    <div class="food-card cafe">
+                        <div class="food-icon">🌿</div>
+                        <div class="food-info">
+                            <h4>Rainforest</h4>
+                            <p class="food-type">자연친화 카페</p>
+                            <p class="food-desc">열대 우림 컨셉의 카페. 신선한 주스와 건강한 식사.</p>
+                            <div class="food-tags">
+                                <span>🥤 생과일주스</span>
+                                <span>🥗 건강식</span>
+                                <span>🌴 힐링</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card cafe">
+                        <div class="food-icon">🍰</div>
+                        <div class="food-info">
+                            <h4>Cafe Terrace</h4>
+                            <p class="food-type">디저트 카페</p>
+                            <p class="food-desc">아늑한 분위기에서 현지 커피와 디저트를 즐기기 좋은 곳.</p>
+                            <div class="food-tags">
+                                <span>🎂 디저트</span>
+                                <span>🛋️ 아늑함</span>
+                                <span>👨‍👩‍👦 가족</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section id="checklist" class="checklist-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">✅</span>
+                여행 체크리스트
+            </h2>
+            <div class="checklist-grid">
+                <!-- Before Travel -->
+                <div class="checklist-card">
+                    <h3>📋 출발 전 체크</h3>
+                    <div class="checklist-items">
+                        <label class="check-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span>여권 유효기간 확인 (6개월 이상)</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span>항공권 예약 확인</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span>리조트 픽업 서비스 신청</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>여행자 보험 가입</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>그랩(Grab) 앱 설치</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>환전 (동/달러)</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>빈원더스 티켓 예매</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Packing List -->
+                <div class="checklist-card">
+                    <h3>🧳 짐 챙기기</h3>
+                    <div class="checklist-items">
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>여권 & 항공권</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>수영복 (워터파크용)</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>선크림 & 선글라스</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>모자 / 양산</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>가벼운 긴팔 (사원 방문용)</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>편한 운동화</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>상비약</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>휴대폰 충전기 & 보조배터리</span>
+                        </label>
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>방수팩 (워터파크용)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Useful Info -->
+                <div class="checklist-card info-card">
+                    <h3>📱 유용한 정보</h3>
+                    <div class="info-list">
+                        <div class="info-row">
+                            <span class="info-label">🌡️ 날씨</span>
+                            <span class="info-value">26~30°C (건기)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">🕐 시차</span>
+                            <span class="info-value">한국 -2시간</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">💱 환율</span>
+                            <span class="info-value">1,000원 ≈ 18,000동</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">🔌 전압</span>
+                            <span class="info-value">220V (한국과 동일)</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">📞 비상연락</span>
+                            <span class="info-value">경찰 113 / 응급 115</span>
+                        </div>
+                    </div>
+                    <div class="app-recommend">
+                        <h4>📲 필수 앱</h4>
+                        <div class="app-list">
+                            <span class="app-badge">🚗 Grab</span>
+                            <span class="app-badge">🗺️ Google Maps</span>
+                            <span class="app-badge">🌐 Google 번역</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon">💡</span>
+                여행 꿀팁
+            </h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🚗</div>
+                    <h4>그랩 이용 팁</h4>
+                    <p>목적지 주소를 영어로 저장해두면 편리합니다. 현금 결제 시 잔돈 준비!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💵</div>
+                    <h4>환전 팁</h4>
+                    <p>한국에서 달러로 환전 후 현지 금은방에서 동으로 재환전하면 유리합니다.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌊</div>
+                    <h4>빈원더스 팁</h4>
+                    <p>여분의 옷과 수건 필수! 사물함 이용료 약 50,000동.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍜</div>
+                    <h4>식사 팁</h4>
+                    <p>생수는 꼭 사서 마시기. 얼음은 가급적 피하세요.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏛️</div>
+                    <h4>사원 방문 팁</h4>
+                    <p>무릎과 어깨를 덮는 옷 착용. 안되면 입구에서 가릴 옷 제공됩니다.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💳</div>
+                    <h4>결제 팁</h4>
+                    <p>큰 식당/호텔은 카드 OK. 작은 가게는 현금 필수!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-message">
+                    <h3>🌴 즐거운 나트랑 여행 되세요!</h3>
+                    <p>2026.01.01 ~ 01.06 | 윤혜림 가족</p>
+                </div>
+                <div class="footer-quote">
+                    <p>"The world is a book, and those who do not travel read only one page."</p>
+                    <span>- Saint Augustine</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

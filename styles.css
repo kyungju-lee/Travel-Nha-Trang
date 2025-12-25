@@ -1,0 +1,1306 @@
+/* ============================================
+   🌴 Nha Trang Travel Assistant - Styles
+   Theme: Tropical Paradise with Modern Elegance
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    /* Primary Colors - Tropical Sunset */
+    --coral: #FF6B6B;
+    --coral-dark: #E85555;
+    --turquoise: #4ECDC4;
+    --turquoise-dark: #3DB9B1;
+    --sand: #F7DC6F;
+    --sand-light: #FDF5D6;
+    --ocean-deep: #1A535C;
+    --ocean-light: #247B7B;
+    
+    /* Neutrals */
+    --white: #FFFFFF;
+    --cream: #FFF9F0;
+    --charcoal: #2D3436;
+    --slate: #636E72;
+    --light-gray: #DFE6E9;
+    
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, #FF6B6B 0%, #FFA07A 50%, #F7DC6F 100%);
+    --gradient-ocean: linear-gradient(135deg, #1A535C 0%, #4ECDC4 100%);
+    --gradient-tropical: linear-gradient(180deg, #87CEEB 0%, #4ECDC4 50%, #1A535C 100%);
+    
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 50%;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+    --shadow-glow: 0 0 40px rgba(78, 205, 196, 0.3);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="palm" patternUnits="userSpaceOnUse" width="100" height="100"><path d="M50 0 Q60 30 50 50 Q40 30 50 0" fill="%234ECDC420"/></pattern></defs><rect fill="url(%23palm)" width="100" height="100"/></svg>'),
+        var(--gradient-tropical);
+    background-size: 200px 200px, cover;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at 20% 80%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(247, 220, 111, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--cream), transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: var(--space-lg);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.travel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: rgba(255, 255, 255, 0.95);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ocean-deep);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-lg);
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+}
+
+.title-sub {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.title-main {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 12vw, 7rem);
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.05em;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.title-korean {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--sand);
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+.travelers {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.traveler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    background: rgba(255, 255, 255, 0.9);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.traveler .avatar {
+    font-size: 2rem;
+}
+
+.traveler span:last-child {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ocean-deep);
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.scroll-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-md) 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--slate);
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--turquoise);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Flight Section
+   ============================================ */
+.flight-section {
+    padding: var(--space-2xl) 0;
+    background: var(--white);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--ocean-deep);
+    margin-bottom: var(--space-xl);
+}
+
+.section-title .icon {
+    font-size: 2.5rem;
+}
+
+.flight-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+.flight-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.flight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--gradient-ocean);
+    color: var(--white);
+}
+
+.flight-card.return .flight-header {
+    background: var(--gradient-sunset);
+}
+
+.flight-type {
+    font-weight: 600;
+}
+
+.flight-number {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-md);
+}
+
+.airport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.airport-code {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ocean-deep);
+}
+
+.airport-name {
+    font-size: 0.9rem;
+    color: var(--slate);
+}
+
+.flight-time {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+.flight-date {
+    font-size: 0.8rem;
+    color: var(--slate);
+}
+
+.next-day {
+    font-size: 0.75rem;
+    color: var(--coral);
+    font-weight: 700;
+}
+
+.flight-arrow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    position: relative;
+}
+
+.arrow-line {
+    width: 100%;
+    height: 2px;
+    background: var(--light-gray);
+    position: relative;
+}
+
+.arrow-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left-color: var(--light-gray);
+}
+
+.plane-icon {
+    font-size: 1.5rem;
+    transform: rotate(90deg);
+}
+
+.plane-icon.return-plane {
+    transform: rotate(-90deg);
+}
+
+.duration {
+    font-size: 0.75rem;
+    color: var(--slate);
+    background: var(--cream);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.flight-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--cream);
+    font-size: 0.85rem;
+    color: var(--slate);
+}
+
+/* ============================================
+   Schedule Section
+   ============================================ */
+.schedule-section {
+    padding: var(--space-2xl) 0;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="2" fill="%234ECDC410"/></svg>'),
+        var(--cream);
+}
+
+.timeline {
+    position: relative;
+    padding-left: var(--space-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--turquoise), var(--coral));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+    animation: slideIn 0.6s ease-out backwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+.timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-xl) - 2px);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--turquoise);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    z-index: 5;
+}
+
+.timeline-marker.day-1 { background: var(--ocean-deep); }
+.timeline-marker.day-2 { background: var(--coral); }
+.timeline-marker.day-3 { background: var(--turquoise); }
+.timeline-marker.day-4 { background: var(--ocean-light); }
+.timeline-marker.day-5 { background: var(--sand); color: var(--charcoal); }
+.timeline-marker.day-6 { background: var(--coral-dark); }
+
+.day-num {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.timeline-marker.day-5 .day-num {
+    color: var(--charcoal);
+}
+
+.timeline-content {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.day-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ocean-deep);
+}
+
+.day-theme {
+    font-size: 0.85rem;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--sand-light);
+    border-radius: var(--radius-sm);
+}
+
+.day-events {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.event {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--cream);
+    transition: transform 0.2s ease;
+}
+
+.event:hover {
+    transform: translateX(5px);
+}
+
+.event.highlight {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
+    border-left: 4px solid var(--turquoise);
+}
+
+.event.optional {
+    border: 2px dashed var(--light-gray);
+    background: transparent;
+}
+
+.event-time {
+    min-width: 60px;
+    font-weight: 600;
+    color: var(--turquoise-dark);
+    font-size: 0.9rem;
+}
+
+.event-detail strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--charcoal);
+}
+
+.event-detail p {
+    font-size: 0.9rem;
+    color: var(--slate);
+}
+
+.tip-box {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--turquoise);
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+}
+
+.tip-content strong {
+    display: block;
+    margin-bottom: var(--space-sm);
+    color: var(--turquoise-dark);
+}
+
+.tip-content ol {
+    padding-left: var(--space-lg);
+    font-size: 0.85rem;
+}
+
+.tip-content li {
+    margin-bottom: var(--space-xs);
+}
+
+.day-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: var(--sand-light);
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--slate);
+}
+
+.note-icon {
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   Resort Section
+   ============================================ */
+.resort-section {
+    padding: var(--space-2xl) 0;
+    background: var(--white);
+}
+
+.resort-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .resort-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.resort-image {
+    position: relative;
+    min-height: 400px;
+    background: 
+        linear-gradient(135deg, rgba(26, 83, 92, 0.8), rgba(78, 205, 196, 0.6)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect fill="%234ECDC4" width="400" height="400"/><circle cx="200" cy="300" r="150" fill="%231A535C30"/><rect x="50" y="350" width="300" height="50" fill="%23F7DC6F50"/></svg>');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-lg);
+}
+
+.resort-badge {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    background: var(--sand);
+    color: var(--charcoal);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.resort-name-overlay h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: var(--space-xs);
+}
+
+.resort-name-overlay p {
+    color: var(--sand);
+    font-size: 1rem;
+}
+
+.resort-info {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.info-item {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--cream);
+    border-radius: var(--radius-md);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--slate);
+    margin-bottom: var(--space-xs);
+}
+
+.info-item p {
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.resort-amenities h4 {
+    margin-bottom: var(--space-md);
+    color: var(--ocean-deep);
+}
+
+.amenity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.amenity-tags .tag {
+    padding: var(--space-xs) var(--space-md);
+    background: linear-gradient(135deg, var(--turquoise), var(--ocean-light));
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   Attractions Section
+   ============================================ */
+.attractions-section {
+    padding: var(--space-2xl) 0;
+    background: 
+        radial-gradient(ellipse at 10% 90%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+        var(--cream);
+}
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
+}
+
+.attraction-card {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.attraction-card.featured {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .attraction-card.featured {
+        grid-column: span 1;
+    }
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-badge {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.card-badge.must-go {
+    background: var(--coral);
+    color: var(--white);
+}
+
+.card-badge.recommend {
+    background: var(--turquoise);
+    color: var(--white);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-image.vinwonders {
+    background: linear-gradient(135deg, #FF6B6B, #FFA07A, #F7DC6F);
+}
+
+.card-image.ponagar {
+    background: linear-gradient(135deg, #8B4513, #D2691E, #F4A460);
+}
+
+.card-image.longson {
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
+}
+
+.card-image.dammarket {
+    background: linear-gradient(135deg, #2E8B57, #3CB371, #90EE90);
+}
+
+.card-image.honchong {
+    background: linear-gradient(135deg, #4169E1, #6495ED, #87CEEB);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: var(--space-lg);
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: var(--ocean-deep);
+    margin-bottom: var(--space-sm);
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--slate);
+    margin-bottom: var(--space-md);
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    font-size: 0.8rem;
+    color: var(--slate);
+    margin-bottom: var(--space-md);
+}
+
+.card-tips {
+    padding: var(--space-md);
+    background: var(--cream);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+}
+
+.card-tips strong {
+    display: block;
+    color: var(--turquoise-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.card-tips ul {
+    padding-left: var(--space-lg);
+    color: var(--slate);
+}
+
+.card-tips li {
+    margin-bottom: var(--space-xs);
+}
+
+/* ============================================
+   Food Section
+   ============================================ */
+.food-section {
+    padding: var(--space-2xl) 0;
+    background: var(--white);
+}
+
+.food-category {
+    margin-bottom: var(--space-xl);
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: var(--ocean-deep);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 3px solid var(--turquoise);
+    display: inline-block;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.food-card {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.food-card.cafe {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(210, 180, 140, 0.1));
+}
+
+.food-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.food-info h4 {
+    font-size: 1.1rem;
+    color: var(--ocean-deep);
+    margin-bottom: var(--space-xs);
+}
+
+.food-type {
+    font-size: 0.8rem;
+    color: var(--turquoise-dark);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+.food-desc {
+    font-size: 0.9rem;
+    color: var(--slate);
+    margin-bottom: var(--space-md);
+}
+
+.food-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.food-tags span {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    color: var(--slate);
+}
+
+.food-recommend {
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+    color: var(--coral);
+    font-weight: 500;
+}
+
+/* ============================================
+   Checklist Section
+   ============================================ */
+.checklist-section {
+    padding: var(--space-2xl) 0;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><path d="M20 0 L20 40 M0 20 L40 20" stroke="%234ECDC408" stroke-width="1"/></svg>'),
+        var(--cream);
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.checklist-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.checklist-card h3 {
+    font-size: 1.2rem;
+    color: var(--ocean-deep);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--turquoise);
+}
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.check-item:hover {
+    background: var(--cream);
+}
+
+.check-item input {
+    display: none;
+}
+
+.checkmark {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--turquoise);
+    border-radius: 6px;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.check-item input:checked + .checkmark {
+    background: var(--turquoise);
+}
+
+.check-item input:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.check-item input:checked ~ span:last-child {
+    text-decoration: line-through;
+    color: var(--slate);
+}
+
+.info-card .info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm);
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+}
+
+.info-label {
+    color: var(--slate);
+}
+
+.info-value {
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.app-recommend {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--light-gray);
+}
+
+.app-recommend h4 {
+    margin-bottom: var(--space-md);
+    color: var(--ocean-deep);
+}
+
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.app-badge {
+    padding: var(--space-xs) var(--space-md);
+    background: var(--gradient-ocean);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   Tips Section
+   ============================================ */
+.tips-section {
+    padding: var(--space-2xl) 0;
+    background: var(--ocean-deep);
+    color: var(--white);
+}
+
+.tips-section .section-title {
+    color: var(--white);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.tip-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tip-card .tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.tip-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+    color: var(--sand);
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    padding: var(--space-xl) 0;
+    background: var(--charcoal);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.footer-message h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-message p {
+    color: var(--slate);
+}
+
+.footer-quote {
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-quote p {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--turquoise);
+    margin-bottom: var(--space-sm);
+}
+
+.footer-quote span {
+    font-size: 0.85rem;
+    color: var(--slate);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .travelers {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .nav-container {
+        justify-content: flex-start;
+        padding: var(--space-sm);
+    }
+    
+    .timeline {
+        padding-left: var(--space-lg);
+    }
+    
+    .timeline::before {
+        left: 10px;
+        width: 3px;
+    }
+    
+    .timeline-marker {
+        left: calc(-1 * var(--space-lg) - 1px);
+        width: 32px;
+        height: 32px;
+    }
+    
+    .flight-route {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .flight-arrow {
+        transform: rotate(90deg);
+        width: 80px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title .icon {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .main-nav,
+    .scroll-indicator,
+    .checklist-card input {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: var(--space-lg);
+    }
+}
+
